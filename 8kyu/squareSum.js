@@ -14,22 +14,16 @@
 // 1 variant
 
 function squareSum(numbers){
-    return numbers
-    // const el1 = numbers[]
-    // const squareEl1 : number = Math.pow(el1, y:2)
-
-    // const el2 = numbers[1]
-    // const squareEl2 = el2 ** 2
-
-    // console.log('squareEl1: ', squareEl1)
-    // console.log('squareEl2: ', squareEl2)
+    let sum = 0
 
     for (let i = 0; i < numbers.length; i++) {
         const el = numbers[i]
         const squareEl = el **2
-        console.log('iteration: ', i, 'squareEl ', squareEl)
+        sum = sum + squareEl
     }
-        
+    return sum
 }
 
-console.log(squareSum(numbers[1,2]))
+console.log(squareSum([1,2,])) // 5
+console.log(squareSum([0, 3, 4, 5])) // 50
+console.log(squareSum([])) // 0
