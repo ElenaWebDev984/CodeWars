@@ -21,12 +21,12 @@ function invert(array) {
  }
 
  // 2 variant
-function invert(array) {
-    const invert = array => array.map(num => -num);
-}
+ function invert(array) {
+    return array.map(i => 0 - i);
+ }
 
 
-// 3 variant
+// 3 variant 
 function invert(array) {
     return array.map(elem => {
         return -elem
