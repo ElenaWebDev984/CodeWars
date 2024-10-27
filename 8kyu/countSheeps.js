@@ -26,6 +26,7 @@
 // [[true,true,true,false,true,true,true,true,true,false,true,false,true,false,false,true,true,true,true,true,false,false,true,true], 17]
 
 // ✅ SOLUTIONS
+// 1 variant
 
 function countSheep(array) {
     let result = 0;
@@ -35,6 +36,11 @@ function countSheep(array) {
         }
     }
     return result
+  }
+
+  // 2 variant
+  function countSheeps(arrayOfSheeps) {
+    return arrayOfSheeps.filter(Boolean).length;
   }
   
   
