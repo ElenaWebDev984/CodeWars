@@ -27,7 +27,7 @@
 
 // ✅ SOLUTIONS
 
-function countSheeps(array) {
+function countSheep(array) {
     let result = 0;
     for(let i = 0; i < array.length; i++) {
         if(array[i] === true) {
@@ -36,5 +36,5 @@ function countSheeps(array) {
     }
     return result
   }
-  console.log(array[]);
+  
   
