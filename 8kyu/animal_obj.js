@@ -33,5 +33,11 @@
 // 1 variant
 
 function animal(obj){
-    return ?
+    return `This ${obj.color} ${obj.name} has ${obj.legs} legs.`;
+  }
+
+
+  // 2 variant
+  function animal({name, legs, color}) {
+    return `This ${color} ${name} has ${legs} legs.`;
   }
