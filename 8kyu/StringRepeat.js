@@ -23,5 +23,5 @@ function repeatStr (n, s) {
     return s.repeat(n);
 }
 
-// 1 variant
+// 2 variant
 repeatStr = (n, s) => s.repeat(n)
