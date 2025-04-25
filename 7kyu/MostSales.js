@@ -34,6 +34,15 @@ function top3(products, amounts, prices) {
     return products.map((i, ind)=> [i, revenue[ind]]).sort((a,b)=> b[1]-a[1]).map(i=> i[0]).slice(0, 3)
 }
 
+// 4 variant
+const top3 = (products, amounts, prices) => {
+    return products
+        .reduce((control, curr, i) => [...control, { title: curr, total: prices[i] * amounts[i], index: i }], [])
+        .sort((a, b) => a.total === b.total ? a.index - b.index : b.total - a.total)
+        .map(item => item.title)
+        .slice(0, 3);
+}
+
 
 
 
