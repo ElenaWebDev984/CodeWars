@@ -18,6 +18,23 @@ function twoHighest(arr) {
     return [...new Set(arr)].sort((a, b) => b - a).slice(0, 2)
 }
 
+// 2 variant
+function twoHighest(arr) {
+    let first = -Infinity;
+    let second = -Infinity;
+
+    for (const num of arr) {
+        if (num > first) {
+            second = first;
+            first = num;
+        } else if (num > second && num < first) {
+            second = num;
+        }
+    }
+
+    return second === -Infinity ? [first].filter(x => x !== -Infinity) : [first, second];
+}
+
 
 
 
