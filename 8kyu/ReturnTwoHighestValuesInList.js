@@ -1,44 +1,25 @@
-// 🎯 simple calculator
+// 🎯
 
 //❓ DESCRIPTIONS
-// You are required to create a simple calculator that returns the result of addition, subtraction, multiplication or division of two numbers.
+// In this kata, your job is to return the two distinct highest values in a list. If there're less than 2 unique values, return as many of them, as possible.
 //
-//     Your function will accept three arguments:
-//     The first and second argument should be numbers.
-//     The third argument should represent a sign indicating the operation to perform on these two numbers.
+// The result should also be ordered from highest to lowest.
 //
-//     if the variables are not numbers or the sign does not belong to the list above a message "unknown value" must be returned.
+//     Examples:
 //
-//     Example:
-// arguments: 1, 2, "+"
-// should return 3
-//
-// arguments: 1, 2, "&"
-// should return "unknown value"
-//
-// arguments: 1, "k", "*"
-// should return "unknown value"
-
-
+// [4, 10, 10, 9]  =>  [10, 9]
+//     [1, 1, 1]  =>  [1]
+//     []  =>  []
 
 
 // ✅ SOLUTIONS
 // 1 variant
-function calculator(a,b,sign){
-    if ((typeof a === "number") && (typeof b === "number")) {
-        switch (sign) {
-            case "+":
-                return a + b;
-            case "-":
-                return a - b;
-            case "*":
-                return a * b;
-            case "/":
-                return a / b;
-        }
-    }
-    return "unknown value";
+function twoHighest(arr) {
+    return [...new Set(arr)].sort((a, b) => b - a).slice(0, 2)
 }
+
+
+
 
 
 
