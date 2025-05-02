@@ -27,3 +27,11 @@ function booleanToString(b){
 function booleanToString(b){
     return String(b);
 }
+
+// 5 variant
+function booleanToString(b) {
+    return b + '';
+}
+
+// 6 variant
+const booleanToString = b => `${b}`;  // Шаблонные строки тоже преобразуют boolean в string
