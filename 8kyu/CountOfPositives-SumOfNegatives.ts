@@ -15,7 +15,7 @@
 
 // ✅ SOLUTIONS
 // 1 variant
-export function countPositivesSumNegatives(input: number[] | null): number[] {
+function countPositivesSumNegatives(input: number[] | null): number[] {
     if (!input || input.length === 0) {
         return [];
     }
@@ -35,7 +35,7 @@ export function countPositivesSumNegatives(input: number[] | null): number[] {
 }
 
 // 2 variant
-export function countPositivesSumNegatives(input: any) {
+export function countPositivesSumNegatives2(input: any) {
     return input && input.length
         ? [
             input.filter((p: number) => p > 0).length,
@@ -47,7 +47,7 @@ export function countPositivesSumNegatives(input: any) {
 }
 
 // 3 variant
-export function countPositivesSumNegatives(input: any[] | null): number[] {
+function countPositivesSumNegatives3(input: any[] | null): number[] {
     return !input || input.length < 1? []: [input.filter(a => a > 0).length, input.reduce((a, b) => a + (b < 0 ? b : 0), 0)];
 }
 
