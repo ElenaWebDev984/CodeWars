@@ -30,8 +30,8 @@ function solution(str){
 
   // 3 variant
 function solution(s){
-    var o = '';
-  for (var i = s.length - 1; i >= 0; i--)
+    let o = '';
+    for (let i = s.length - 1; i >= 0; i--)
     o += s[i];
   return o;
   }
