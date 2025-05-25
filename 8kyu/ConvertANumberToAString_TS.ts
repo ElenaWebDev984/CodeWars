@@ -24,7 +24,3 @@ export function numberToString(num: number): string {
     return num.toString();
 }
 
-// 2 variant
-
-
-// 3 variant
